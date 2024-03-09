@@ -4,8 +4,8 @@ import api from "@/api";
 
 import SearchBox from "./components/SearchBox";
 
-export default async function Home({searchParams}: {searchParams: {query: string}}) {
-  const restaurants = await api.search(searchParams.query);
+export default async function Home({searchParams}: {searchParams: {q: string}}) {
+  const restaurants = await api.search(searchParams.q);
   /*   const restaurants = await api.list(); */
 
   return (
